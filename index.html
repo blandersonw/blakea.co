@@ -13,9 +13,12 @@
             padding: 20px;
             line-height: 1.6;
         }
+        .table-container {
+            width: 100%;
+            overflow-x: auto; /* Allows table to be scrollable on small screens */
+        }
         table {
             width: 100%;
-            margin-top: 20px;
             border-collapse: collapse;
         }
         th, td {
@@ -31,30 +34,41 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        @media (min-width: 768px) {
+            .horizontal-border {
+                border-top: 3px solid #333; /* Horizontal border on top */
+                border-bottom: 3px solid #333; /* Horizontal border on bottom */
+            }
+        }
     </style>
 </head>
 <body>
-    <p>Hi, I am <a href="https://www.linkedin.com/in/blakeandersonw" target="_blank">Blake Wilder Anderson</a></p>
-    <table>
-        <tr>
-            <th>Project</th>
-            <th>Start Date</th>
-            <th>Downloads</th>
-            <th>Revenue</th>
-        </tr>
-        <tr>
-            <td>RizzGPT (now PlugAI)</td>
-            <td>July 2023</td>
-            <td>3.5 million</td>
-            <td>$2 million</td>
-        </tr>
-        <tr>
-            <td>UMAX</td>
-            <td>October 2023</td>
-            <td>5 million</td>
-            <td>$2.5 million</td>
-        </tr>
-    </table>
+    <div class="horizontal-border">
+        <p>hi, I am <a href="https://www.linkedin.com/in/blakeandersonw" target="_blank">Blake Wilder Anderson</a>. here are some of my projects</p>
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>project</th>
+                <th>launch</th>
+                <th>downloads</th>
+                <th>revenue</th>
+            </tr>
+            <tr>
+                <td>rizzgpt (now plugai)</td>
+                <td>july 2023</td>
+                <td>3.5 million</td>
+                <td>$2 million</td>
+            </tr>
+            <tr>
+                <td>umax</td>
+                <td>december 2023</td>
+                <td>5 million</td>
+                <td>$2.5 million</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
+
 
